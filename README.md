@@ -29,7 +29,7 @@ This repository contains the backend API for a travel blog application. It utili
 1.  **Clone the repository:**
 
     ```bash
-    git clone <https://github.com/mariam-nabil-dev/travel-blog-api>
+    git clone "https://github.com/mariam-nabil-dev/travel-blog-api"
     ```
 
 2.  **Navigate to the project directory:**
@@ -75,28 +75,32 @@ This repository contains the backend API for a travel blog application. It utili
 
 ### Authentication
 
-- `POST /signup`: Register a new user.
-- `POST /login`: Log in an existing user.
-- `POST /logout`: Log out the current user.
-- `POST /forgot-password`: send reset password email.
-- `POST /reset-password`: reset the password using token.
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/notifications", notificationRoutes);
+
+- `POST /api/auth/signup`: Register a new user.
+- `POST /api/auth/login`: Log in an existing user.
+- `POST /api/auth/logout`: Log out the current user.
+- `POST /api/auth/forgot-password`: send reset password email.
+- `POST /api/auth/reset-password`: reset the password using token.
 
 ### User Profile
 
-- `PUT /update-profile`: Update the user's profile (requires authentication).
-- `GET /check`: Check if the user is authenticated (requires authentication).
-- `GET /users`: Get list of users for sidebar (requires authentication).
+- `PUT /api/auth/update-profile`: Update the user's profile (requires authentication).
+- `GET /api/auth/check`: Check if the user is authenticated (requires authentication).
+- `GET /api/auth/users`: Get list of users for sidebar (requires authentication).
 
 ### Messaging
 
-- `GET /:id`: Get messages between the authenticated user and another user (requires authentication).
-- `POST /send/:id`: Send a message to another user (requires authentication).
+- `GET /api/messages/:id`: Get messages between the authenticated user and another user (requires authentication).
+- `POST /api/messages/send/:id`: Send a message to another user (requires authentication).
 
 ### Notifications
 
-- `GET /notifications`: Get all notifications for the authenticated user (requires authentication).
-- `PATCH /notifications/:id/read`: Mark a specific notification as read (requires authentication).
-- `PATCH /notifications/read-all`: Mark all notifications as read (requires authentication).
+- `GET /api/notifications/notifications`: Get all notifications for the authenticated user (requires authentication).
+- `PATCH /api/notifications/notifications/:id/read`: Mark a specific notification as read (requires authentication).
+- `PATCH /api/notifications/notifications/read-all`: Mark all notifications as read (requires authentication).
 
 ## Environment Variables
 
