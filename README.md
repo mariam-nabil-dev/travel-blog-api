@@ -98,9 +98,9 @@ app.use("/api/notifications", notificationRoutes);
 
 ### Notifications
 
-- `GET /api/notifications/notifications`: Get all notifications for the authenticated user (requires authentication).
-- `PATCH /api/notifications/notifications/:id/read`: Mark a specific notification as read (requires authentication).
-- `PATCH /api/notifications/notifications/read-all`: Mark all notifications as read (requires authentication).
+- `GET /api/notifications`: Get all notifications for the authenticated user (requires authentication).
+- `PATCH /api/notifications/:id/read`: Mark a specific notification as read (requires authentication).
+- `PATCH /api/notifications/read-all`: Mark all notifications as read (requires authentication).
 
 ## Environment Variables
 
