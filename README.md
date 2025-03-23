@@ -75,10 +75,6 @@ This repository contains the backend API for a travel blog application. It utili
 
 ### Authentication
 
-app.use("/api/auth", authRoutes);
-app.use("/api/messages", messageRoutes);
-app.use("/api/notifications", notificationRoutes);
-
 - `POST /api/auth/signup`: Register a new user.
 - `POST /api/auth/login`: Log in an existing user.
 - `POST /api/auth/logout`: Log out the current user.
